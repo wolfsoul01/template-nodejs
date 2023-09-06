@@ -8,7 +8,7 @@ html {
     display: block;
 }
 
-a{
+.button{
     padding: 10px;
     background-color: rgb(233, 156, 13);
     color: #fff;

@@ -1,13 +1,275 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT ?? 3000;
+const fs = require('fs');
 
 app.use(express.static('public'))
 
-app.get('*', (req, res) => {
-    res.redirect('/');
+app.get('/json',(req,res)=>{
+
+    res.json(data)
 })
+
+app.get('/', (req, res) => {
+    // res.redirect('/');
+})
+
+
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}`);
 })
+
+
+const data =[
+    {
+      "CARRERA:": "AÑO ACADÉMICO:",
+      "Ing. Informática": "3ero",
+      PERIODO: "CURSO:",
+      SEGUNDO: 2023,
+    },
+    { "CARRERA:": "TIPO DE CURSO:", "Ing. Informática": "CPE", PERIODO: "AULA:" },
+    { __EMPTY: "TURNOS" },
+    {
+      "CARRERA:": "SEMANA",
+      "Ing. Informática": "FECHAS",
+      __EMPTY: 1,
+      __EMPTY_1: 2,
+      __EMPTY_2: 3,
+      PERIODO: 4,
+      __EMPTY_3: 5,
+      __EMPTY_4: 6,
+      __EMPTY_5: 7,
+      SEGUNDO: 8,
+      __EMPTY_6: 9,
+      __EMPTY_7: 10,
+      __EMPTY_8: 11,
+    },
+    {
+      "CARRERA:": 1,
+      "Ing. Informática": 45178,
+      __EMPTY: "AC",
+      __EMPTY_2: "RA",
+      __EMPTY_3: "P",
+      __EMPTY_5: " ALMUERZO ALMUERZO",
+      SEGUNDO: "PW",
+      __EMPTY_7: "I",
+    },
+    {
+      "CARRERA:": 2,
+      "Ing. Informática": 45185,
+      __EMPTY: "AC",
+      __EMPTY_2: "RA",
+      __EMPTY_3: "Optv 1",
+      SEGUNDO: "PW",
+      __EMPTY_7: "I",
+    },
+    {
+      "CARRERA:": 3,
+      "Ing. Informática": 45192,
+      __EMPTY: "AC",
+      __EMPTY_2: "RA",
+      __EMPTY_3: "P",
+      SEGUNDO: "PW",
+      __EMPTY_7: "I",
+    },
+    {
+      "CARRERA:": 4,
+      "Ing. Informática": 45199,
+      __EMPTY: "AC",
+      __EMPTY_2: "RA",
+      __EMPTY_3: "Optv 1",
+      SEGUNDO: "PW",
+      __EMPTY_7: "I",
+    },
+    {
+      "CARRERA:": 5,
+      "Ing. Informática": 45206,
+      __EMPTY: "AC",
+      __EMPTY_2: "RA",
+      __EMPTY_3: "P",
+      SEGUNDO: "PW",
+      __EMPTY_7: "I",
+    },
+    {
+      "CARRERA:": 6,
+      "Ing. Informática": 45213,
+      __EMPTY: "AC",
+      __EMPTY_2: "RA",
+      __EMPTY_3: "Optv 1",
+      SEGUNDO: "PW",
+      __EMPTY_7: "I",
+    },
+    {
+      "CARRERA:": 7,
+      "Ing. Informática": 45220,
+      __EMPTY: "AC",
+      __EMPTY_2: "RA",
+      __EMPTY_3: "P",
+      SEGUNDO: "PW",
+      __EMPTY_7: "I",
+    },
+    {
+      "CARRERA:": 8,
+      "Ing. Informática": 45227,
+      __EMPTY: "AC",
+      __EMPTY_2: "RA",
+      __EMPTY_3: "P",
+      SEGUNDO: "PW",
+      __EMPTY_7: "I",
+    },
+    {
+      "CARRERA:": 9,
+      "Ing. Informática": 45234,
+      __EMPTY: "AC",
+      __EMPTY_2: "RA",
+      __EMPTY_3: "P",
+      SEGUNDO: "PW",
+      __EMPTY_7: "I",
+    },
+    {
+      "CARRERA:": 10,
+      "Ing. Informática": 45241,
+      __EMPTY: "AC",
+      __EMPTY_2: "RA",
+      __EMPTY_3: "P",
+      SEGUNDO: "PW",
+      __EMPTY_7: "I",
+    },
+    {
+      "CARRERA:": 11,
+      "Ing. Informática": 45248,
+      __EMPTY: "AC",
+      __EMPTY_2: "RA",
+      __EMPTY_3: "P",
+      SEGUNDO: "PW",
+      __EMPTY_7: "I",
+    },
+    {
+      "CARRERA:": 12,
+      "Ing. Informática": 45255,
+      __EMPTY: "AC",
+      __EMPTY_2: "RA",
+      __EMPTY_3: "P",
+      SEGUNDO: "PW",
+      __EMPTY_7: "Optv 1",
+    },
+    {
+      "CARRERA:": 13,
+      "Ing. Informática": 45262,
+      __EMPTY: "AC",
+      __EMPTY_2: "RA",
+      __EMPTY_3: "P",
+      SEGUNDO: "PW",
+      __EMPTY_7: "Optv 1",
+      __EMPTY_10: "Horarios",
+    },
+    {
+      "CARRERA:": 14,
+      "Ing. Informática": 45269,
+      __EMPTY: "AC",
+      __EMPTY_2: "RA",
+      __EMPTY_3: "P",
+      SEGUNDO: "PW",
+      __EMPTY_7: "Optv 1",
+      __EMPTY_10: 1,
+      __EMPTY_11: "8: 30 am – 9:10 am",
+    },
+    {
+      "CARRERA:": 15,
+      "Ing. Informática": 45276,
+      __EMPTY: "AC",
+      __EMPTY_2: "Optv 1",
+      __EMPTY_3: "P",
+      SEGUNDO: "PW",
+      __EMPTY_7: "Optv 1",
+      __EMPTY_10: 2,
+      __EMPTY_11: "9: 15 am – 9:55 am",
+    },
+    {
+      "CARRERA:": 16,
+      "Ing. Informática": 45283,
+      __EMPTY: "AC",
+      __EMPTY_2: "RA",
+      __EMPTY_3: "P",
+      SEGUNDO: "PW",
+      __EMPTY_7: "Optv 1",
+      __EMPTY_10: 3,
+      __EMPTY_11: "10: 05 am- 10:45 am",
+    },
+    {
+      "CARRERA:": 17,
+      "Ing. Informática": 45290,
+      __EMPTY: "RECESO",
+      SEGUNDO: "DOCENTE",
+      __EMPTY_10: 4,
+      __EMPTY_11: "10: 50 am- 11:30 am",
+    },
+    {
+      "CARRERA:": 18,
+      "Ing. Informática": 45297,
+      __EMPTY: "AC",
+      __EMPTY_2: "RA",
+      __EMPTY_3: "P",
+      SEGUNDO: "PW",
+      __EMPTY_7: "Optv 1",
+      __EMPTY_10: 5,
+      __EMPTY_11: "11:40 am – 12:20 pm",
+    },
+    {
+      "CARRERA:": 19,
+      "Ing. Informática": 45304,
+      __EMPTY: "EXÁMENES ORDINARIOS",
+      __EMPTY_10: 6,
+      __EMPTY_11: "12:25 pm – 1:05 pm",
+    },
+    {
+      "CARRERA:": 20,
+      "Ing. Informática": 45311,
+      __EMPTY: "EXÁMENES ORDINARIOS",
+      __EMPTY_10: "Almuerzo",
+    },
+    {
+      "CARRERA:": 21,
+      "Ing. Informática": 45318,
+      __EMPTY: "EXÁMENES EXTRAORDINARIOS",
+      __EMPTY_10: 7,
+      __EMPTY_11: "1:35 pm – 2:15 pm",
+    },
+    {
+      "Ing. Informática": 45325,
+      __EMPTY: "EX. EXT. DE FIN DE CURSO",
+      __EMPTY_10: 8,
+      __EMPTY_11: "2: 20 pm – 3:00 pm",
+    },
+    { __EMPTY_10: 9, __EMPTY_11: "3:10 pm – 3: 55 pm" },
+    { __EMPTY_10: 10, __EMPTY_11: "4: 00 pm – 4:40 pm" },
+    {
+      "CARRERA:": "Asignatura",
+      __EMPTY: "Símbolo",
+      PERIODO: "Profesor(es)",
+      __EMPTY_14: "Cat. D.",
+    },
+    {
+      "CARRERA:": "Programación web",
+      __EMPTY: "PW",
+      PERIODO: "Leonardo Fundora",
+    },
+    {
+      "CARRERA:": "Arquitectura de Computadora",
+      __EMPTY: "AC",
+      PERIODO: "Orlenys Machin",
+    },
+    { "CARRERA:": "Razonamiento aproximado", __EMPTY: "RA" },
+    { "CARRERA:": "Inglés", __EMPTY: "I" },
+    { "CARRERA:": "Optativa I", __EMPTY: "Optv 1" },
+    {
+      "CARRERA:": "Patrones de diseño avanzado",
+      __EMPTY: "p",
+      PERIODO: "Angel E. Hernández",
+    },
+    { "CARRERA:": "Leyenda" },
+    { "CARRERA:": "Prueba Parcial", __EMPTY: "∆" },
+    { __EMPTY_15: "Horarios" },
+  ];
+  

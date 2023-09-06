@@ -8,13 +8,14 @@ html {
     display: block;
 }
 
-button{
+a{
     padding: 10px;
     background-color: rgb(233, 156, 13);
     color: #fff;
     border: none;
     border-radius: 5px;
     font-size: large;
+    text-decoration: none;
 }
 
 body {

@@ -8,6 +8,15 @@ html {
     display: block;
 }
 
+button{
+    padding: 10px;
+    background-color: rgb(233, 156, 13);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+}
+
 body {
     margin: 0;
     background-color: #0d0f10;
